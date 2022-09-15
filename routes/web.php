@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BookController;
 use App\Http\Livewire\Books;
 use App\Models\Book;
 use Illuminate\Support\Facades\Route;
@@ -27,5 +28,5 @@ Route::prefix('books')->group(function(){
         return view('pages.books.books');
     });
 
-    Route::view('create', 'pages.books.create');
+    Route::get('create', [BookController::class, 'create']);
 });

@@ -1,5 +1,5 @@
 
-<div class="container py-4 ">
+<div class="container py-4">
     {{-- <button wire:click="changeGreetings" class="btn btn-primary">Change greetings</button> --}}
     <div class="btn-group float-end" role="group">
         <button class="btn btn-secondary btn-sm" disabled>Delete</button>

@@ -10,9 +10,12 @@ class BookController extends Controller
 {
     //
     public function create(){
-
         return view('pages.books.create')->with([
             'authors' => Author::all()
         ]);
+    }
+
+    public function store(Request $request){
+        // $request->
     }
 }

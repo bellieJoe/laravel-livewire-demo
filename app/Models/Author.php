@@ -19,6 +19,6 @@ class Author extends Model
     relationship
     */
     public function books(){
-        $this->hasMany(Book::class, 'author_id', 'author_id');
+        return $this->hasMany(Book::class, 'author_id');
     }
 }

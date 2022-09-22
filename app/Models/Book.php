@@ -15,6 +15,10 @@ class Book extends Model
         'book_title', 'author_id', 'date_published'
     ];
 
+    protected $casts = [
+        'date_published' => 'datetime'
+    ];
+
     /* 
     relationships
     */

@@ -29,8 +29,7 @@ class AuthorController extends Controller
 
     public function show($author_id){
         return view('pages.authors.show')->with([
-            'author' => Author::find($author_id)
-            // where(['author_id' => $author_id])->with(['books'])->first()
+            'author' => Author::where('author_id', $author_id)->with('books')->first()
         ]);
     }
 }

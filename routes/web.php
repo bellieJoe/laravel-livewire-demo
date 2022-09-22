@@ -3,6 +3,7 @@
 use App\Http\Controllers\AuthorController;
 use App\Http\Controllers\BookController;
 use App\Http\Livewire\Books;
+use App\Models\Author;
 use App\Models\Book;
 use Illuminate\Support\Facades\Route;
 
@@ -17,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('/testing', function(){
-    return Book::query()->with(['author'])->get();
+    return Author::query()->with(['books'])->get();
 });
 
 Route::get('/', function () {

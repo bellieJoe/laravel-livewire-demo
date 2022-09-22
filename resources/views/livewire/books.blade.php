@@ -4,6 +4,7 @@
     <div class="btn-group float-end" role="group">
         <button class="btn btn-secondary btn-sm" disabled>Delete</button>
         <a href="/books/create" class="btn btn-primary btn-sm">Add Book</a>
+        <a href="/authors/create" class="btn btn-primary btn-sm">Add Author</a>
     </div>
     <table class="table ">
         <thead>
@@ -19,7 +20,7 @@
             <tr>
                 <th scope="row">{{ $book->book_id }}</th>
                 <td >{{ $book->book_title }}</td>
-                <td >{{ $book->author->fullname }}</td>
+                <td ><a href="/authors/{{ $book->author->author_id }}">{{ $book->author->fullname }}</a></td>
                 <td >{{ $book->date_published }}</td>
             </tr>
             @endforeach

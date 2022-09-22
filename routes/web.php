@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthorController;
 use App\Http\Controllers\BookController;
 use App\Http\Livewire\Books;
 use App\Models\Book;
@@ -24,9 +25,17 @@ Route::get('/', function () {
 });
 
 Route::prefix('books')->group(function(){
-    Route::get('', function(){
-        return view('pages.books.books');
-    });
+    Route::view('', 'pages.books.books');
 
     Route::get('create', [BookController::class, 'create']);
+
+    Route::post('store', [BookController::class, 'store']);
+});
+
+Route::prefix('authors')->group(function(){
+    Route::get('create', [AuthorController::class, 'create']);
+
+    Route::get('{author_id}', [AuthorController::class, 'show']);
+
+    Route::post('store', [AuthorController::class, 'store']);
 });

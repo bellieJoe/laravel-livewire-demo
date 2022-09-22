@@ -25,6 +25,10 @@ Route::get('/', function () {
     return view('app');
 });
 
+Route::prefix('bootstrap')->group(function(){
+    Route::view('', 'pages.bootstrap');
+});
+
 Route::prefix('books')->group(function(){
     Route::view('', 'pages.books.books');
 

@@ -12,7 +12,7 @@
                 <th scope="col">#</th>
                 <th scope="col">Title</th>
                 <th scope="col">Author</th>
-                <th scope="col">Date Publish</th>
+                <th scope="col">Date Published</th>
             </tr>
         </thead>
         <tbody>
@@ -21,7 +21,7 @@
                 <th scope="row">{{ $book->book_id }}</th>
                 <td >{{ $book->book_title }}</td>
                 <td ><a href="/authors/{{ $book->author->author_id }}">{{ $book->author->fullname }}</a></td>
-                <td >{{ $book->date_published }}</td>
+                <td >{{ $book->date_published->format('F d, Y') }}</td>
             </tr>
             @endforeach
         </tbody>

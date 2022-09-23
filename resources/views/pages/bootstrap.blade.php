@@ -59,8 +59,8 @@
             </div>
             <div class="col-sm-7 col-md-4 col-lg-3">
                 <div class="card shadow-lg border-3 border-primary">
+                    <div class="bg-light card-body rounded-2"><p class="text-center small h6">Most popular</p></div>
                     <div class="card-body text-center">
-                        <div class="bg-light"><p class="text-center lead h6 pt-2">Most popular</p></div>
                         <h4 class="card-title">Team Edition</h4>
                         <p class="lead card-subtitle">For small teams</p>
                         <p class="display-6 text-primary fw-bold">$450</p>

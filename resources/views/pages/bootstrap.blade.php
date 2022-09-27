@@ -1,7 +1,14 @@
 @extends('app')
 @section('content')
+<button class="btn btn-dark" type="button" onclick="printJS({
+    printable: 'pricing', 
+    type:'html',
+    css: '{{ asset('css/app.css') }}'
+    })">
+    Print Pricing
+</button>
 
-<nav class="navbar navbar-expand-md navbar-primary">
+<nav class="navbar navbar-expand-md navbar-primary" >
     <div class="container">
         <a href="#intro" class="navbar-brand fw-bold ">Petter</a>
         <button class="navbar-toggler text-light" type='button' data-bs-toggle="collapse" data-bs-target="#main-nav">
